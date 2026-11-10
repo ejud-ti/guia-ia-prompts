@@ -41,6 +41,16 @@ main{margin-left:var(--side);padding:84px max(28px,calc((100vw - var(--side) - 1
 .partbanner .kicker{margin-bottom:6px}
 .partbanner h2{font:700 clamp(24px,3vw,34px)/1.2 Georgia,"Times New Roman",serif;color:#fff;margin:0}
 
+/* trilhas */
+h3.tt{font-size:clamp(17px,1.8vw,20px);color:var(--verde);margin:40px 0 8px;padding-bottom:5px;border-bottom:2px solid var(--salvia)}
+.tw{overflow-x:auto;margin:12px 0 18px;-webkit-overflow-scrolling:touch}
+table.d{border-collapse:collapse;width:100%;font-size:14.5px;min-width:560px}
+table.d th,table.d td{border:1px solid var(--bd);padding:9px 12px;text-align:left;vertical-align:top}
+table.d th{background:var(--salvia);color:var(--verde)}
+table.d tr:nth-child(even) td{background:#fbfaf6}
+table.d td.cc{white-space:nowrap;vertical-align:middle}
+.cp.all{padding:7px 12px;font-size:13px}
+
 .step{display:flex;gap:18px;align-items:center;background:var(--creme);border:1px solid var(--bd);border-left:8px solid var(--verde);border-radius:6px;padding:16px 20px;margin:34px 0 14px}
 .step .n{flex:none;text-align:center;line-height:1}
 .step .n span{display:flex;align-items:center;justify-content:center;min-width:52px;height:50px;padding:0 14px;border-radius:26px;background:var(--verde);color:#fff;font:700 21px Georgia,serif;white-space:nowrap}
@@ -88,6 +98,22 @@ main{margin-left:var(--side);padding:84px max(28px,calc((100vw - var(--side) - 1
 <h1>Guia de Prompts para IA na Elaboração de Documentos Técnicos</h1>
 <p class="sub">Pesquisar, organizar e revisar com segurança: passo a passo para Psicologia, Serviço Social e Pedagogia no sistema de justiça</p>
 </div>
+</section>
+
+<!-- ======================= TRILHAS ======================= -->
+<section id="trilhas" data-menu="Trilhas prontas">
+<h3 class="tt">Trilhas prontas por tipo de documento</h3>
+<p>Siga a sequência da esquerda para a direita. Os blocos B e O são usados quando houver necessidade; os demais, sempre.</p>
+<div class="tw"><table class="d">
+<tr><th>Documento</th><th>Sequência sugerida</th><th>Copiar</th></tr>
+<tr><td><strong>Laudo psicológico</strong></td><td>Passo 0 → P1 + PSI-0 → B1 a B4 (referências são obrigatórias) → O1 + O5 → você escreve → PSI-7, PSI-8, PSI-9, R2 → PSI-3 → R5, R6, R7 → R8, R9</td><td class="cc"><button class="cp all" type="button" data-prompts="P1,PSI-0,B1,B2,B3,B4,O1,O5,PSI-7,PSI-8,PSI-9,R2,PSI-3,R5,R6,R7,R8,R9">Copiar todos</button></td></tr>
+<tr><td><strong>Relatório psicológico</strong></td><td>Passo 0 → P1 + PSI-0 → O1 + O5 → você escreve → PSI-7, PSI-8, PSI-9, R2 → PSI-2 → R5, R6, R7 → R8, R9</td><td class="cc"><button class="cp all" type="button" data-prompts="P1,PSI-0,O1,O5,PSI-7,PSI-8,PSI-9,R2,PSI-2,R5,R6,R7,R8,R9">Copiar todos</button></td></tr>
+<tr><td><strong>Parecer psicológico</strong></td><td>Passo 0 → P1 + PSI-0 → P2 a P4 (se houver documento questionado) → B1 a B4 → você escreve → PSI-7, PSI-9 → PSI-4 → R5, R6 → R8, R9</td><td class="cc"><button class="cp all" type="button" data-prompts="P1,PSI-0,P2,P3,P4,B1,B2,B3,B4,PSI-7,PSI-9,PSI-4,R5,R6,R8,R9">Copiar todos</button></td></tr>
+<tr><td><strong>Relatório ou laudo social</strong></td><td>Passo 0 → P1 → O1 a O5 → você escreve → R1, R2, R3 → SS-1 → R4, R5, R6, R7 → R8, R9</td><td class="cc"><button class="cp all" type="button" data-prompts="P1,O1,O2,O3,O4,O5,R1,R2,R3,SS-1,R4,R5,R6,R7,R8,R9">Copiar todos</button></td></tr>
+<tr><td><strong>Relatório pedagógico</strong></td><td>Passo 0 → P1 → O1 + O5 → você escreve → R1, R2 → PED-1 → R4, R6, R7 → R8, R9</td><td class="cc"><button class="cp all" type="button" data-prompts="P1,O1,O5,R1,R2,PED-1,R4,R6,R7,R8,R9">Copiar todos</button></td></tr>
+<tr><td><strong>Relatório multiprofissional ou psicossocial</strong></td><td>Passo 0 → P1 (+ PSI-0) → cada área revisa a sua parte → PSI-5 ou SS-2 → R5, R6, R7 → R8, R9</td><td class="cc"><button class="cp all" type="button" data-prompts="P1,PSI-0,PSI-5,SS-2,R5,R6,R7,R8,R9">Copiar todos</button></td></tr>
+<tr><td><strong>Documento recebido de terceiros</strong></td><td>Inspeção fora da IA → P2 → P3 → P4 → conferência com o original</td><td class="cc"><button class="cp all" type="button" data-prompts="P2,P3,P4">Copiar todos</button></td></tr>
+</table></div>
 </section>
 
 <!-- ======================= PARTE 3 ======================= -->
@@ -576,7 +602,7 @@ Verifique o relatório pedagógico abaixo, sem reescrever e sem avaliar a crian�
 (function(){
   function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 
-  async function copyText(text, btn){
+  async function copyText(text){
     try{ await navigator.clipboard.writeText(text); }
     catch(e){
       var ta=document.createElement('textarea');
@@ -585,26 +611,53 @@ Verifique o relatório pedagógico abaixo, sem reescrever e sem avaliar a crian�
       try{document.execCommand('copy');}catch(_){}
       ta.remove();
     }
-    btn.textContent='Copiado ✓'; btn.classList.add('ok');
-    setTimeout(function(){btn.textContent='Copiar prompt'; btn.classList.remove('ok');},2000);
+  }
+
+  function flash(btn,msg,orig){
+    btn.textContent=msg; btn.classList.add('ok');
+    setTimeout(function(){btn.textContent=orig; btn.classList.remove('ok');},2200);
   }
 
   var shortcuts=[];
+  var bank={};   // código do prompt -> {titulo, texto}
+
   document.querySelectorAll('pre.prompt').forEach(function(pre,i){
     var text=pre.textContent.trim();
     var label=pre.getAttribute('data-label')||'';
+    var short=label.replace(/^PROMPT /,'').replace(/ \(copie, preencha os \[campos\] e cole\)$/,'');
+    var code=short.split(' · ')[0].trim();
+    bank[code]={titulo:short,texto:text};
+
     var wrap=document.createElement('div'); wrap.className='pbox'; wrap.id='prompt-'+(i+1);
     var bar=document.createElement('div'); bar.className='pbar';
     var t=document.createElement('span'); t.textContent=label;
     var btn=document.createElement('button'); btn.className='cp'; btn.type='button'; btn.textContent='Copiar prompt';
-    btn.addEventListener('click',function(){copyText(text,btn);});
+    btn.addEventListener('click',async function(){
+      await copyText(text);
+      flash(btn,'Copiado ✓','Copiar prompt');
+    });
     bar.appendChild(t); bar.appendChild(btn);
     pre.parentNode.insertBefore(wrap,pre);
     pre.removeAttribute('data-label');
     pre.innerHTML=esc(text).replace(/\[[^\]\n]+\]/g,function(m){return '<span class="f">'+m+'</span>';});
     wrap.appendChild(bar); wrap.appendChild(pre);
-    var short=label.replace(/^PROMPT /,'').replace(/ \(copie, preencha os \[campos\] e cole\)$/,'');
     shortcuts.push({id:wrap.id,text:short});
+  });
+
+  // botões "Copiar todos" das trilhas
+  document.querySelectorAll('button[data-prompts]').forEach(function(btn){
+    var codes=btn.getAttribute('data-prompts').split(',').map(function(s){return s.trim();});
+    var found=codes.filter(function(c){return bank[c];});
+    var orig='Copiar todos ('+found.length+')';
+    btn.textContent=orig;
+    btn.title='Copia, na ordem da trilha: '+found.join(', ');
+    btn.addEventListener('click',async function(){
+      var blocos=found.map(function(c){
+        return '==== '+bank[c].titulo+' ====\n'+bank[c].texto;
+      });
+      await copyText(blocos.join('\n\n'));
+      flash(btn,'Copiado ✓ ('+found.length+')',orig);
+    });
   });
 
   var side=document.getElementById('side');
